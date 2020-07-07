@@ -1,0 +1,182 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Garamond', sans-serif;
+    color: #1f2123;
+    font-family: 'Merriweather', serif;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px 15px;
+  background: #fff;
+}
+
+fieldset {
+    border: none;
+    flex-grow: 1;
+    padding: 0;
+
+}
+
+
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+
+.main-header {
+    display: flex;
+    margin: 0 auto;
+    padding: 10px;
+    background: #2e4054;
+}
+
+.main-header h1 {
+    color: white;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 1em;;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-self:  center;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+textarea,
+select {
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #f3f3f3;
+  color: #222;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
+}
+
+
+select {
+    padding: 6px;
+    height: 32px;
+    border-radius: 2px;
+}
+
+.border1 {
+    display: flex;
+    max-width: 90%;
+    height: 5px;
+    margin: 20px auto 0;
+    border-top: 4px solid #2e4054;
+  }
+.border2 {
+    display: flex;
+    max-width: 90%;
+    height: 10px;
+    /* display: block; */
+    margin: 2px auto 0;
+    border-top: 2px solid #2e4054;
+  }
+
+.border3 {
+    display: block;
+    margin: 10px;
+    width: 100%;
+}
+
+
+legend {
+    font-weight: bold;
+    padding: 15px 0;
+}
+
+p {
+    color: #b1b1b1;
+    font-size: .9em;
+    max-width: 90%;
+}
+
+.title h1 {
+    font-size: 1em;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+label {
+    color: darkgray;
+    font-size: .8em;
+
+}
+
+input {
+    margin-top: 10px;
+}
+
+::placeholder {
+    color: lightgray;
+    font-style: oblique;
+    font-size: 70%;
+    text-align: right;
+}
+
+
+select option:first-child{
+  color: green;
+}
+
+input,
+textarea {
+  outline: none;
+  border-radius: 4px;
+}
+ 
+input:focus, textarea:focus {
+  border: 1.5px solid rgba(45, 93, 146, 1);
+}
+
+#zip {
+    width: 40%;
+    display: block;
+}
+
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+
+@media (min-width: 768px) {
+
+    .border1 {
+        max-width: 470px;
+    }
+
+
+
+}
