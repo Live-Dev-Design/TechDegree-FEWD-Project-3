@@ -6,19 +6,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <header>
-            <h1>Signup for our newsletter</h1>
-            <p>Get the latest news on how your code is doing right in your inbox</p>
+        <header class="main-header">
+            <h1>The Code Review</h1>
         </header>
         <main>
+            <section>
+                <h1>Signup for our newsletter</h1>
+                <p>Get the latest news on how your code is doing right in your inbox</p>
+            </section>
             <form action="index.html" action="post" >
                 <fieldset>
                     <legend>Contact Information</legend>
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="user_name">
+                    <label for="name" >Full Name</label>
+                    <input type="text" id="name" name="user_name" placeholder="required">
 
                     <label for="mail">Email Address</label>
-                    <input type="email" id="mail" name="user_email">
+                    <input type="email" id="mail" name="user_email" placeholder="required">
 
                     <label for="tel">Phone Number</label>
                     <input type="tel" id="tel" name="user_number">
@@ -30,7 +33,7 @@
                     <input type="text" id="city" name="user_city">
 
                     <label for="state">State</label>
-                    <select id="state" name="user_state"></select>
+                    <select id="state" name="user_state" placeholder="Choose State"></select>
                         <option value="alabama">Alabama</option>
                         <option value="alaska">Alaska</option>
                         <option value="arizona">Arizona</option>
@@ -46,7 +49,7 @@
                 <fieldset>
                     <legend>Newsletter</legend>
                     <label>Select the newsletter you would like to receive</label>
-                    <input type="checkbox" id="html" value="interest_hml" name="user_interest"><label class="light" for="html">HTML News</label><br>
+                    <input type="checkbox" id="html" value="interest_html" name="user_interest"><label class="light" for="html">HTML News</label><br>
                     <input type="checkbox" id="css" value="interest_css" name="user_interest"><label class="light" for="css">CSS News</label><br>
                     <input type="checkbox" id="javascript" value="interest_javascript" name="user_interest"><label class="light" for="javascript">JavaScript News</label><br>
 
@@ -62,7 +65,7 @@
             </form>
 
         </main>
-
+        <footer>Copyright The Code Review</footer>
 
     </body>
 
