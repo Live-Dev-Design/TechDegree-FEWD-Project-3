@@ -4,9 +4,14 @@
 
 
 *, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
 }
 
 body {
@@ -16,26 +21,15 @@ body {
 }
 
 form {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 10px 15px;
-  background: #fff;
+    margin: 0 auto;
+    padding: 0px 15px;
+    background: #fff;
 }
 
 fieldset {
     border: none;
     padding: 0;
 
-}
-
-
-
-/* ================================= 
-  Base Layout Styles
-==================================== */
-main {
-    display: flex;
-    flex-direction: column;
 }
 
 footer {
@@ -47,7 +41,37 @@ footer {
     font-style: oblique;
     text-align: center;
     margin-bottom: 20px;
-}    
+}  
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+
+.sec-main {
+   max-width: 250px;
+   margin: 0 auto;
+}
+
+.sec-main {
+    text-align: center;
+}
+
+.sec-main p {
+    font-size: .7em; 
+}
+
+.sec-main h1 {
+    font-size: 1.1em;
+}
+
+  
+
+.border {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 10px 15px;
+}
 
 .main-header {
     display: flex;
@@ -82,7 +106,7 @@ select {
   padding: 15px;
   width: 100%;
   background-color: #f3f3f3;
-  color: #222;
+  color: darkgray;
   box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
   margin-bottom: 30px;
 }
@@ -120,7 +144,6 @@ legend {
 p {
     color: #b1b1b1;
     font-size: .9em;
-    max-width: 90%;
 }
 
 .title h1 {
@@ -154,9 +177,7 @@ input {
 }
 
 
-select option:first-child{
-  color: green;
-}
+
 
 input,
 textarea {
@@ -190,6 +211,15 @@ button {
     margin-bottom: 10px;
 }
 
+.state {
+    font-family: 'Merriweather', serif; 
+    color: darkgray;
+    font-size: .7em;
+    
+}
+
+
+
 /* ================================= 
   Media Queries
 ==================================== */
@@ -199,9 +229,12 @@ button {
 
     .border1,
     .border2 {
-        max-width: 470px;
+        width: 500px;
     }
 
-
+    form {
+        width: 500px;
+        margin: 0 auto;
+    }
 
 }
