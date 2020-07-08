@@ -11,7 +11,6 @@
 
 body {
     margin: 0 auto;
-    font-family: 'Garamond', sans-serif;
     color: #1f2123;
     font-family: 'Merriweather', serif;
 }
@@ -25,7 +24,6 @@ form {
 
 fieldset {
     border: none;
-    flex-grow: 1;
     padding: 0;
 
 }
@@ -35,8 +33,16 @@ fieldset {
 /* ================================= 
   Base Layout Styles
 ==================================== */
+main {
+    display: flex;
+    flex-direction: column;
+}
 
-
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}    
 .main-header {
     display: flex;
     margin: 0 auto;
@@ -59,12 +65,7 @@ fieldset {
     text-align: center;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-input,
+.field-1 input,
 textarea,
 select {
   border: none;
@@ -88,25 +89,20 @@ select {
 }
 
 .border1 {
-    display: flex;
-    max-width: 90%;
-    height: 5px;
+    height:     5px;
     margin: 20px auto 0;
     border-top: 4px solid #2e4054;
   }
 .border2 {
-    display: flex;
-    max-width: 90%;
     height: 10px;
-    /* display: block; */
     margin: 2px auto 0;
     border-top: 2px solid #2e4054;
   }
 
 .border3 {
-    display: block;
-    margin: 10px;
-    width: 100%;
+    height: 10px;
+    margin: 2px auto 0;
+    border-top: 2px solid #2e4054;
 }
 
 
@@ -122,16 +118,23 @@ p {
 }
 
 .title h1 {
-    font-size: 1em;
+    font-size: 1.1em;
     margin-top: 20px;
     margin-bottom: 0;
 }
 
 label {
+    display: block;
     color: darkgray;
     font-size: .8em;
-
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
+
+.box {
+    display: inline;
+}
+
 
 input {
     margin-top: 10px;
@@ -164,7 +167,21 @@ input:focus, textarea:focus {
     display: block;
 }
 
-
+button {
+    font-family: 'Merriweather', serif; 
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    background-color: #66bbab;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #66bbab;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+    margin-bottom: 10px;
+}
 
 /* ================================= 
   Media Queries
@@ -173,7 +190,8 @@ input:focus, textarea:focus {
 
 @media (min-width: 768px) {
 
-    .border1 {
+    .border1,
+    .border2 {
         max-width: 470px;
     }
 
