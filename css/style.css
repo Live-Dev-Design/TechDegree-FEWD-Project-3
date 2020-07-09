@@ -1,35 +1,46 @@
 /* ================================= 
   Base Element Styles
 ==================================== */
-*, *:before, *:after {
+/* *, *:before, *:after {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-}
+} */
 
 body {
-  font-family: 'Merriweather', serif;
-  background: #fff;
-  color: #1f2123;
-  margin: 0 auto;
+    font-family: 'Merriweather', serif;
+    background: #fff;
+    color: #1f2123;
+    margin: 0 auto;
 }
 
-.container {
-  width: 80%;
-  max-width: 300px;
-  margin: 0 auto;
+legend {
+    font-weight: bold;
+    padding: 15px 0 5px 0;
+    margin-bottom: 10px;
 }
 
-.container * {
-  box-sizing: border-box;
+label {
+    color: #364352;
+    font-size: .7em;
 }
 
 p {
-  color: #b1b1b1;
+    color: #b1b1b1;
 }
 /* ================================= 
   Base Layout Styles
 ==================================== */
+.container {
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.container * {
+    box-sizing: border-box;
+}
+
 .main-header {
     background: #2e4054;
     color: #fff;
@@ -50,7 +61,7 @@ p {
 }
 
 .sec-main h2 {
-  font-size: 1em;
+    font-size: 1.1em;
 }
 
 .sec-main p {
@@ -76,240 +87,339 @@ p {
     border-top: 2px solid #2e4054;
 }
 
+
+
 .field-1,
 .field-2 {
-  padding-right: 0;
-  padding-left: 0;
+    padding-right: 0;
+    padding-left: 0;
 }
 
 ::placeholder {
+    font-family: 'Merriweather', serif;
     color: lightgray;
     font-style: oblique;
     font-size: 70%;
     text-align: right;
 }
 
-legend {
-    font-weight: bold;
-    padding: 15px 0 5px 0;
-/*    margin-bottom: 10px;
-*/}
-
-label {
-    color: #2e4054;
-    font-size: .7em;
+.field-2 textarea::placeholder {
+    text-align: left;
+    font-size: .8em;
 }
+
+
 
 .flex-outer,
 .flex-inner {
-  list-style-type: none;
-  padding: 0;
+    list-style-type: none;
+    padding: 0;
 }
 
 .flex-outer {
-  max-width: 800px;
-  margin: 0 auto;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .flex-outer li,
 .flex-inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .flex-inner {
-  padding: 8px 0;
-  justify-content: space-between;  
+    padding: 8px 0;
+    justify-content: space-between;  
 }
   
 .flex-outer li label,
 .flex-outer li p {
-  font-weight: 300;
-  letter-spacing: .09em;
+    font-weight: 300;
+    letter-spacing: .09em;
 }
 
 .flex-outer > li > label,
 .flex-outer li p {
-  flex: 1 0 120px;
-  max-width: 220px;
+    flex: 1 0 120px;
+    max-width: 220px;
 }
 
 .flex-outer > li > label + *,
 .flex-inner {
-  flex: 1 0 220px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+    flex: 4 0 220px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .flex-outer li p {
-  margin: 0;
+    margin: 0;
 }
 
 .flex-outer li input:not([type='checkbox']),
 .flex-outer li textarea {
-  padding: 15px;
-  width:100%;
+    padding: 15px;
+    width:100%;
 }
 
 fieldset {
-  border: none;
+    border: none;
 }
 
 .field-1 li,
 .field-2 ul{
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .field-1 input,
 textarea,
 select {
-  border: none;
-  font-size: 16px;
-  height: auto;
-  margin: 0;
-  outline: 0;
-  padding: 15px;
-  width: 100%;
-  background-color: #f3f3f3;
-  color: darkgray;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 15px;
+    width: 100%;
+    background-color: #f3f3f3;
+    color: darkgray;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
 }
 
 footer {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    font-size: .5em;
-    color: #b1b1b1;
+    font-size: .8em;
     font-style: oblique;
     text-align: center;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    padding-top: 15px;
+    margin-bottom: 0;
+    margin-top: 40px;
+    height: 100px;
+    background: #2e4054;
 }  
+
+footer p {
+    color: #fff;
+}
 
 input,
 textarea {
-  outline: none;
-  border-radius: 4px;
+    outline: none;
+    border-radius: 4px;
 }
  
 input:focus, textarea:focus {
-  border: 1.5px solid rgba(45, 93, 146, 1);
+    border: 1.5px solid rgba(45, 93, 146, 1);
 }
 
 button {
+    cursor: pointer;
     font-family: 'Merriweather', serif; 
     font-weight: bold;
     padding: 19px 39px 18px 39px;
     color: #FFF;
-    background-color: #66bbab;
+    background-color: #4ab5b2;
     font-size: 18px;
     text-align: center;
     font-style: normal;
     border-radius: 5px;
     width: 100%;
-    border: 1px solid #66bbab;
+    border: 1px solid #50c2be;
     border-width: 1px 1px 3px;
-    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
     margin-bottom: 10px;
+    transition: background-color 0.5s ease-out;
 }
 
-.state {
+button:active {
+    background-color: #2e4054;
+}
+
+input,
+label,
+select,
+textarea {
+    cursor: pointer;
+}
+
+#state {
     font-family: 'Merriweather', serif; 
     color: darkgray;
     font-size: .7em;
+    border-radius: 4px;
     
 }
 
 .field-2 ul {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch; 
-  padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; 
+    padding-left: 0;
 }
 
 .field-2 p {
-    font-size: .7em;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    font-size: .8em;
+    margin-top: 5px;
     line-height: 1.5em;  
+    color: #364352;
+}
+
+.field-2 legend {
+    margin-bottom: 0;
 }
 
 .zip {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
 }
 
 .zip input {
-  width: 40%;
-  margin-top: 10px;
+    width: 50%;
+    margin-top: 10px;
+}
+
+
+input[type="checkbox"] {
+    border-radius: 4px;
+    height: 10px;
+}
+
+input[type="radio"] {
+    border-radius: 4px;
+    height: 10px;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
-  margin-right: 15px;
-  margin-left: 0;
+    margin-right: 10px;
+    margin-left: 0;
 }
+
 .box {
     display: inline;
 }
 
 .row {
-  display: flex;
-  flex-direction: row;
-  margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
 }
 
 #message {
-  height: 100px;
-  margin-bottom: 10px;
+    height: 100px;
+    margin-bottom: 10px;
 }
+
+ button:active {
+        background-color: #204051;
+        border-color: #69bcd8;
+    }
+
+
 
 /* ================================= 
   Media Queries
 ==================================== */
+
 @media (min-width: 768px) {
 
-.container {
-  width: 80%;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
- .border1,
-    .border2 {
-        width: 500px;
+    .container {
+        width: 90%;
+        max-width: 600px;
+        margin: 0 auto;
     }
 
-  .flex-outer li label,
-  .flex-outer li p {
-    padding-bottom: 15px;
-  }
+    .border1,
+    .border2 {
+        width: 600px;
+    }
 
-.sec-main p {
-  max-width: 500px;
+    .border2 {
+        margin-bottom: 10px;
+    }
+
+    .flex-outer li label,
+    .flex-outer li p {
+        padding-bottom: 15px;
+    }
+
+    .sec-main p {
+        max-width: 500px;
+    }
+
+    .border3 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .sec-main h2 {
+        font-size: 1.5em;
+        margin-top: 50px;
+    }
+
+    legend {
+        font-size: 1.1em;
+    }
+
+    label {
+        font-size: .8em;
+    }
+
+    button:hover {
+        /* opacity: .85; */
+        color: #fff;
+        background-color: #3b6978;
+        border-color: #69bcd8;
+        font-size: 1.2em;  
+        padding: auto;
 }
 
-li {
-  margin: 10px 0;
-}
+    button {
+        height: 70px;
 
+    }
 
-.zip {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+    button:active {
+        background-color: #204051;
+        border-color: #69bcd8;
+    }
 
-.zip input {
-  width: 20%;
-  margin-right: 200px;
-}
+    .zip {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
-.zip label {
-  padding-top: 30px;
-}
+    .zip input {
+        width: 25%;
+        margin-right: 275px;
+        margin-top: 0em;
+    }
+
+    .zip label {
+        padding-top: 20px;
+    }
+
+    .flex-outer > li > label + *,
+    .flex-inner {
+        margin-top: 0;
+    }
+
+    .field-2 p {
+        font-size: .9em;
+    }
+
+    .sec-main p {
+        font-size: .9em;
+        margin-bottom: 10px;
+    }
+
+    .sec-main h2 {
+        margin-bottom: 5px;
+    }
+
+ 
 
 }

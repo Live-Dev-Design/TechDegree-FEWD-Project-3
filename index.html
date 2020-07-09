@@ -20,7 +20,7 @@
         </section>
 
         <div class="container">
-            <form action="index.html" action="post">
+            <form action="index.html" method="post">
                 <div class="border1"></div>
                 <div class="border2"></div>
                 <fieldset class="field-1">
@@ -28,19 +28,15 @@
                     <ul class="flex-outer">
                         <li>
                             <label for="full-name">Full Name</label>
-                            <input type="text" id="full-name" name="user_name" placeholder="Required">
+                            <input type="text" id="full-name" name="user_name" placeholder="Required" REQUIRED>
                         </li>
                         <li>
                             <label for="email">Email Address</label>
-                            <input type="email" id="email" name="user_email" placeholder="Required">
+                            <input type="email" id="email" name="user_email" placeholder="Required" REQUIRED>
                         </li>
                         <li>
                             <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="user_phone">
-                        </li>
-                        <li>
-                            <label for="phone">Phone</label>
-                            <input type="tel" id="phone" placeholder="Enter your phone here">
+                            <input type="tel" id="phone" name="user_phone" placeholder="">
                         </li>
                         <li>
                             <label for="street">Street Address</label>
@@ -52,7 +48,7 @@
                         </li>
                         <li>
                             <label for="state">State</label>
-                            <select class="state" name="user_state">
+                            <select id="state" name="user_state">
                                 <option selected>Choose State</option>
                                 <option value="alabama">Alabama</option>
                                 <option value="alaska">Alaska</option>
@@ -115,25 +111,25 @@
                 <fieldset class="field-2">
                     <legend>Newsletter</legend>
                     <p>Select the newsletters you would like to receive</p>
-                    <div class="row"><input type="checkbox" id="html" value="interest_html" name="user_interest"><label
+                    <div class="row"><input type="checkbox" id="html" value="interest_html" name="user_interest-html"><label
                             class="box" for="html">HTML News</label></div>
-                    <div class="row"><input type="checkbox" id="css" value="interest_css" name="user_interest"><label
+                    <div class="row"><input type="checkbox" id="css" value="interest_css" name="user_interest-css"><label
                             class="box" for="css">CSS News</label></div>
                     <div class="row"><input type="checkbox" id="javascript" value="interest_javascript"
-                            name="user_interest"><label class="box" for="javascript">JavaScript News</label></div>
+                            name="user_interest-javascript"><label class="box" for="javascript">JavaScript News</label></div><br>
                     <p>Newsletter format</p>
-                    <div class="row"><input type="radio" id="format_html" value="format_html" name="user_format"><label
+                    <div class="row"><input type="radio" id="format_html" value="format_html" name="user_format-html"><label
                             for="format_html" class="box">HTML</label></div>
                     <div class="row"><input type="radio" id="format_plain" value="format_plain"
-                            name="user_format"><label for="format_plain" class="box">Plain text</label></div>
+                            name="user_format-text"><label for="format_plain" class="box">Plain text</label></div><br>
                     <p class="message">Other topics you'd like to hear about</p>
-                    <textarea id="message"></textarea>
+                    <textarea id="message" name="user_message" placeholder="Type something"></textarea>
                 </fieldset>
-                <button type="submit">Submit</button>
+                <button type="submit">Sign Up</button>
             </form>
         </div>
     </main>
-    <footer>Copyright The Code Review</footer>
+    <footer><p>Copyright The Code Review</p></footer>
 
 </body>
 
