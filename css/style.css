@@ -196,6 +196,7 @@ textarea {
 /* focus area */
 input:focus, textarea:focus {
     border: 1.5px solid rgba(45, 93, 146, 1);
+    transition: border-color 0.5s ease-out;
 }
 
 
@@ -290,6 +291,7 @@ input[type="radio"] {
 /* textbox  */
 #message {
     height: 100px;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
@@ -361,7 +363,6 @@ input[type="radio"] {
     }
     
     button:hover {
-        /* opacity: .85; */
         color: #fff;
         background-color: #3b6978;
         border-color: #69bcd8;
