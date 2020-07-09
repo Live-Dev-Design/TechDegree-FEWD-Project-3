@@ -1,11 +1,7 @@
 /* ================================= 
   Base Element Styles
 ==================================== */
-/* *, *:before, *:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-} */
+
 
 body {
     font-family: 'Merriweather', serif;
@@ -373,7 +369,6 @@ input[type="radio"] {
         background-color: #3b6978;
         border-color: #69bcd8;
         font-size: 1.2em;  
-        padding: auto;
 }
 
     button {
