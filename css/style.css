@@ -1,125 +1,66 @@
 /* ================================= 
   Base Element Styles
 ==================================== */
-
-
 *, *:before, *:after {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-}
-
 body {
-    margin: 0 auto;
-    color: #1f2123;
-    font-family: 'Merriweather', serif;
+  font-family: 'Merriweather', serif;
+  background: #fff;
+  color: #1f2123;
+  margin: 0 auto;
 }
 
-form {
-    margin: 0 auto;
-    padding: 0px 15px;
-    background: #fff;
+.container {
+  width: 80%;
+  max-width: 300px;
+  margin: 0 auto;
 }
 
-fieldset {
-    border: none;
-    padding: 0;
-
+.container * {
+  box-sizing: border-box;
 }
 
-footer {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    font-size: .5em;
-    color: #b1b1b1;
-    font-style: oblique;
-    text-align: center;
-    margin-bottom: 20px;
-}  
-
+p {
+  color: #b1b1b1;
+}
 /* ================================= 
   Base Layout Styles
 ==================================== */
+.main-header {
+    background: #2e4054;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+}
 
-
-.sec-main {
-   max-width: 250px;
-   margin: 0 auto;
+.main-header h1 {
+    padding: 10px;
+    font-size: 1.1em;
 }
 
 .sec-main {
     text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.sec-main h2 {
+  font-size: 1em;
 }
 
 .sec-main p {
     font-size: .7em; 
-}
-
-.sec-main h1 {
-    font-size: 1.1em;
-}
-
-  
-
-.border {
-    max-width: 500px;
+    max-width: 250px;
     margin: 0 auto;
-    padding: 10px 15px;
-}
-
-.main-header {
-    display: flex;
-    margin: 0 auto;
-    padding: 10px;
-    background: #2e4054;
-}
-
-.main-header h1 {
-    color: white;
-    margin: 0 auto;
-    padding: 10px;
-    font-size: 1em;;
-}
-
-.title {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    align-self:  center;
-    text-align: center;
-}
-
-.field-1 input,
-textarea,
-select {
-  border: none;
-  font-size: 16px;
-  height: auto;
-  margin: 0;
-  outline: 0;
-  padding: 15px;
-  width: 100%;
-  background-color: #f3f3f3;
-  color: darkgray;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-  margin-bottom: 30px;
-}
-
-
-select {
-    padding: 6px;
-    height: 32px;
-    border-radius: 2px;
 }
 
 .border1 {
-    height:     5px;
+    height: 5px;
     margin: 20px auto 0;
     border-top: 4px solid #2e4054;
   }
@@ -135,38 +76,10 @@ select {
     border-top: 2px solid #2e4054;
 }
 
-
-legend {
-    font-weight: bold;
-    padding: 15px 0;
-}
-
-p {
-    color: #b1b1b1;
-    font-size: .9em;
-}
-
-.title h1 {
-    font-size: 1.1em;
-    margin-top: 20px;
-    margin-bottom: 0;
-}
-
-label {
-    display: block;
-    color: darkgray;
-    font-size: .8em;
-    margin-top: 15px;
-    margin-bottom: 10px;
-}
-
-.box {
-    display: inline;
-}
-
-
-input {
-    margin-top: 10px;
+.field-1,
+.field-2 {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 ::placeholder {
@@ -176,8 +89,104 @@ input {
     text-align: right;
 }
 
+legend {
+    font-weight: bold;
+    padding: 15px 0 5px 0;
+/*    margin-bottom: 10px;
+*/}
 
+label {
+    color: #2e4054;
+    font-size: .7em;
+}
 
+.flex-outer,
+.flex-inner {
+  list-style-type: none;
+  padding: 0;
+}
+
+.flex-outer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.flex-outer li,
+.flex-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex-inner {
+  padding: 8px 0;
+  justify-content: space-between;  
+}
+  
+.flex-outer li label,
+.flex-outer li p {
+  font-weight: 300;
+  letter-spacing: .09em;
+}
+
+.flex-outer > li > label,
+.flex-outer li p {
+  flex: 1 0 120px;
+  max-width: 220px;
+}
+
+.flex-outer > li > label + *,
+.flex-inner {
+  flex: 1 0 220px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.flex-outer li p {
+  margin: 0;
+}
+
+.flex-outer li input:not([type='checkbox']),
+.flex-outer li textarea {
+  padding: 15px;
+  width:100%;
+}
+
+fieldset {
+  border: none;
+}
+
+.field-1 li,
+.field-2 ul{
+  text-decoration: none;
+}
+
+.field-1 input,
+textarea,
+select {
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #f3f3f3;
+  color: darkgray;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    font-size: .5em;
+    color: #b1b1b1;
+    font-style: oblique;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}  
 
 input,
 textarea {
@@ -187,11 +196,6 @@ textarea {
  
 input:focus, textarea:focus {
   border: 1.5px solid rgba(45, 93, 146, 1);
-}
-
-#zip {
-    width: 40%;
-    display: block;
 }
 
 button {
@@ -218,23 +222,94 @@ button {
     
 }
 
+.field-2 ul {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; 
+  padding-left: 0;
+}
 
+.field-2 p {
+    font-size: .7em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 1.5em;  
+}
+
+.zip {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.zip input {
+  width: 40%;
+  margin-top: 10px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 15px;
+  margin-left: 0;
+}
+.box {
+    display: inline;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+}
+
+#message {
+  height: 100px;
+  margin-bottom: 10px;
+}
 
 /* ================================= 
   Media Queries
 ==================================== */
-
-
 @media (min-width: 768px) {
 
-    .border1,
+.container {
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+ .border1,
     .border2 {
         width: 500px;
     }
 
-    form {
-        width: 500px;
-        margin: 0 auto;
-    }
+  .flex-outer li label,
+  .flex-outer li p {
+    padding-bottom: 15px;
+  }
+
+.sec-main p {
+  max-width: 500px;
+}
+
+li {
+  margin: 10px 0;
+}
+
+
+.zip {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.zip input {
+  width: 20%;
+  margin-right: 200px;
+}
+
+.zip label {
+  padding-top: 30px;
+}
 
 }
